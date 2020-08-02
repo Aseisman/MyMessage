@@ -62,6 +62,21 @@
             }
         }
         
+        @keyframes runn {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg)
+            }
+            100% {
+                -webkit-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+                -moz-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg)
+            }
+        }
+        
         .allContainer {
             height: 100vh;
         }
@@ -390,7 +405,7 @@
         
         .coverall:before {
             width: 100%;
-            height: calc(100% - 797px);
+            height: calc(100% - 100vh);
             background: rgba(255, 255, 255, 0.3);
             filter: alpha(opacity=60);
             opacity: 1;
@@ -408,8 +423,8 @@
             height: 100vh;
             width: 100%;
         }
-        
-        .rings {
+        /* 技能五环 */
+        /* .rings {
             position: relative;
             z-index: 1;
         }
@@ -449,7 +464,6 @@
             cursor: pointer;
             transform: scale(2.5);
             z-index: 6;
-            /* display: flex; */
             align-items: center;
             justify-content: center;
             font-size: 19px;
@@ -475,7 +489,7 @@
         
         .ring-bottom-left {
             transform: translate(-50px, 50px) rotate(257deg);
-            /* rotate 349或者257 */
+            // rotate 349或者257 
             border-color: #fab23f;
             z-index: 2;
         }
@@ -488,7 +502,7 @@
         .ring-segment {
             border-bottom-color: transparent;
             z-index: 3;
-        }
+        } */
         
         .board {
             width: 30%;
@@ -511,6 +525,145 @@
             border-radius: 20px;
             margin-left: -1%;
             margin-top: -1vh;
+        }
+        
+        .Skills {
+            display: flex;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .Skills li {
+            margin: 6px;
+            width: 100px;
+            text-align: center;
+            height: 38px;
+            line-height: 38px;
+        }
+        
+        .Skills li+li {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        .project_1 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: url(./img/gerenjianli.png) no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            left: calc(40% - 300px);
+            top: 80px;
+            transition: all 0.5s;
+            color: #ffffff8f;
+        }
+        
+        .project_1:hover {
+            filter: grayscale(0);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .project_2 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: url(./img/yangguangkecheng.png) no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            left: calc(50% - 125px);
+            top: 80px;
+            transition: all 0.5s;
+            color: #ffffff8f;
+        }
+        
+        .project_2:hover {
+            filter: grayscale(0);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .project_3 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: url(./img/yunzhiguan.png) no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            right: calc(40% - 300px);
+            top: 80px;
+            transition: all 0.5s;
+            color: #ffffff8f;
+        }
+        
+        .project_4 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: url(./img/bg4.jpg) no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            left: calc(40% - 174px);
+            bottom: 150px;
+            transition: all 0.5s;
+            color: #ffffff8f;
+        }
+        
+        .project_3:hover {
+            filter: grayscale(0);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .project_4:hover {
+            filter: grayscale(0);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .project_5 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #c3c2c0;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            right: calc(40% - 174px);
+            bottom: 150px;
+            transition: all 0.5s;
+            color: #ffffff8f;
+        }
+        
+        .project_5:hover {
+            filter: grayscale(0);
+            color: white;
+            transform: scale(1.1);
         }
         
         .W-lian-bottom span {
@@ -563,8 +716,8 @@
         
         .W-lian-bottom .W-qq {
             left: -22px;
-            background: url(img/timg.jpg) no-repeat transparent;
-            background-size: cover;
+            background: url(img/qq.jpg) no-repeat transparent;
+            background-size: 100% 100%;
             width: 138px;
             height: 150px;
             left: -57px;
@@ -578,8 +731,8 @@
         
         .W-lian-bottom .W-weixin {
             left: -22px;
-            background: url(img/timg.jpg) no-repeat transparent;
-            background-size: cover;
+            background: url(img/wechat.jpg) no-repeat transparent;
+            background-size: 100% 100%;
             width: 138px;
             height: 150px;
             left: -57px;
@@ -654,10 +807,17 @@
         .W-time span {
             display: block;
             width: 100%;
-            margin-top: 18px
+            margin-top: 18px;
+            animation: 0.5s linear 0s 1 normal none running runs;
+            /* animation: 0.5s linear 0s 1 normal none running runn; */
         }
+        /* .W-time:hover .W-zhuan {
+            display: block;
+            animation: 0.5s linear 0s 1 normal none running runn;
+        } */
         
         .W-zhuan {
+            animation: 0.5s linear 0s 1 normal none running runs;
             display: none;
             width: 83px;
             height: 83px;
@@ -668,7 +828,7 @@
             background-size: cover;
             position: absolute;
             left: -5px;
-            top: -5px
+            top: -5px;
         }
         
         .W-tim-ul {
@@ -777,7 +937,7 @@
         .W-work-right ul li .W-jie2 span {
             display: block;
             margin: -2px 0 2px;
-            color: #4da9f3
+            color: #f7e621;
         }
     </style>
 </head>
@@ -856,7 +1016,7 @@
                     <div style="font-size: 20px;text-align: center;line-height: 40px;width: 100%;">
                         <div>许楷沂</div>
                         <div>一名初出茅庐的前端程序员</div>
-                        <div>876956898@qq.com</div>
+                        <div>cargox@qq.com</div>
                     </div>
                 </div>
                 <!-- 遮罩层 -->
@@ -884,9 +1044,9 @@
                 <img src="img/bg3.jpg" alt="lun3" class="bgPhoto">
 
             </div>
-            <!-- 内容 技能五环-->
+            <!-- 内容 技能-->
             <div class="page" id="page2" style="height: 100vh;">
-                <div class="absolute">
+                <!-- <div class="absolute">
                     <div class="rings">
                         <div class="ring ring-top"></div>
                         <div class="ring ring-top ring-segment"></div>
@@ -900,15 +1060,98 @@
                         <div class="ring ring-bottom-right ring-segment"></div>
 
                     </div>
+                </div> -->
+                <div class="absolute">
+                    <div>
+                        <!-- <h1>Skills:</h1> -->
+                        <ul class="Skills">
+                            <li style="font-size: 20px;">Skills:</li>
+                            <li style="background:#bef389;color:#dcaeff;">ECMAScript</li>
+                            <li style="background:#e6ffff;color:#a791ff;">CSS3</li>
+                            <li style="background:#d1abff">React</li>
+                            <li style="background:#ffa791">NodeJs</li>
+                            <li style="background:#92d9ff">JAVA</li>
+                            <li style="background:#befbf1;color:#559fdf;">VUE</li>
+                        </ul>
+                    </div>
+                    <!-- 技能板块 -->
+                    <div id="diagram"></div>
+                    <div class="get" style="display: none;">
+                        <div class="arc">
+                            <span class="text">ECMAScript</span>
+                            <input type="hidden" class="percent" value="80" />
+                            <!-- <input type="hidden" class="color" value="#97BE0D" /> -->
+                            <input type="hidden" class="color" value="#bef389" />
+                        </div>
+                        <div class="arc">
+                            <span class="text">CSS3</span>
+                            <input type="hidden" class="percent" value="88" />
+                            <!-- <input type="hidden" class="color" value="#d7d8d8" /> -->
+                            <input type="hidden" class="color" value="#e6ffff" />
+                        </div>
+                        <div class="arc">
+                            <span class="text ">React</span>
+                            <input type="hidden " class="percent" value="78" />
+                            <!-- <input type="hidden " class="color" value="#d3d671" /> -->
+                            <input type="hidden " class="color" value="#d1abff" />
+                        </div>
+                        <div class="arc">
+                            <span class="text">NodeJs</span>
+                            <input type="hidden" class="percent" value="62" />
+                            <!-- <input type="hidden" class="color" value="#BEDBE9" /> -->
+                            <input type="hidden" class="color" value="#ffa791" />
+                        </div>
+                        <div class="arc">
+                            <span class="text">JAVA</span>
+                            <input type="hidden" class="percent" value="80" />
+                            <!-- <input type="hidden" class="color" value="#e4a787" /> -->
+                            <input type="hidden" class="color" value="#92d9ff" />
+                        </div>
+                        <div class="arc">
+                            <span class="text">VUE</span>
+                            <input type="hidden" class="percent" value="88" />
+                            <!-- <input type="hidden" class="color" value="pink" /> -->
+                            <input type="hidden" class="color" value="#befbf1" />
+                        </div>
+                    </div>
                 </div>
                 <img src="img/bg4.jpg" alt="lun3" class="bgPhoto">
             </div>
+            <!-- 项目 项目五环-->
             <div class="page" id="page3" style="height: 100vh;">
                 <!-- 内容 -->
                 <div class="absolute">
+                    <div class="projects">
+                        <a href="#1">
+                            <div class="project_1">
+                                <span>个人简历</span>
+                            </div>
+                        </a>
+                        <a href="#2">
+                            <div class="project_2">
+                                <span>阳光课程</span>
+                            </div>
+                        </a>
+                        <a href="#3">
+                            <div class="project_3">
+                                <!-- <span>云智莞</span> -->
+                            </div>
+                        </a>
+                        <a href="#4">
+                            <div class="project_4">
+                                <span>智慧小区门禁</span>
+                            </div>
+                        </a>
+                        <a href="#4">
+                            <div class="project_5">
+                                <span>···</span>
+                            </div>
+                        </a>
 
+                        <div class="project_pagination"></div>
+                    </div>
                 </div>
-                <img src="img/bg5.jpg" alt="lun3" class="bgPhoto">
+                <img src="img/bg6.jpg" alt="lun3" class="bgPhoto">
             </div>
             <!-- 内容 实习经历 -->
             <div class="page" id="page4" style="height: 100vh;">
@@ -929,6 +1172,13 @@
 
                             <ul class="W-tim-ul">
                                 <li class="W-li-top W-li-top-diyi">
+                                    <em>2020</em>
+                                    <i>7月</i>
+                                    <b></b>
+                                    <div class="clear"></div>
+                                    <span></span>
+                                </li>
+                                <li class="W-li-top W-li-top-diyi">
                                     <em>2019</em>
                                     <i>10月</i>
                                     <b></b>
@@ -940,6 +1190,13 @@
                         <div class="W-work-right">
                             <ul>
                                 <li>
+                                    <p class="W-jie1"><strong>字节跳动训练营</strong>
+                                    </p>
+                                    <p class="W-jie2">
+                                        <span>&lt;学员&gt;</span>字节跳动训练营是由字节跳动与北京邮电大学联合举办的一次免费培训机会，2020年6月笔试通过训练营，与近50位同学一起学习交流，与字节跳动工程师探讨与学习，最终以大项目评分第一结营。
+                                    </p>
+                                </li>
+                                <li>
                                     <p class="W-jie1">在<strong>东莞市绿灯科技有限公司</strong>实习</strong>
                                     </p>
                                     <p class="W-jie2">
@@ -950,8 +1207,25 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
+                    <!-- <div class="workExperiments">
+                        <div class="left">
+                            <div class="work_time">
+                                <div>
+                                    <h5>My experiment</h5>
+                                    <div>
+                                        <span>2020</span>
+                                        <i>year</i>
+                                        <div class="work_zhuan" style="display: none;"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="work_tree"></div>
+                        </div>
+                        <div class="right"></div>
+                    </div> -->
                 </div>
-                <img src="img/bg6.jpg" alt="lun3" class="bgPhoto">
+                <img src="img/bg5.jpg" alt="lun3" class="bgPhoto">
             </div>
             <!-- 内容 about me -->
             <div class="page" id="page5" style="height: 100vh;">
@@ -977,7 +1251,7 @@
                             <span style="color:#41c747">梦想</span>
                             <span style="color:#F44336">未来</span>
                         </div>
-                        <p style="text-align: center;font-size: 17px;color: #96614e;line-height: 26px;margin-bottom: 16vh;">
+                        <p style="text-align: center;font-size: 17px;color: #96614e;line-height: 26px;margin-bottom: 30px;">
                             学习是一个充实愉悦的过程<br /> 喜欢尝试，期待新鲜事物
                             <br /> 前端即兴趣，兴趣即未来
                             <br /> 行路有良友，便是捷径
@@ -990,7 +1264,7 @@
                             </a>
                             <a href="javascript:;">
                                 <img src="img/mail.png" alt="">
-                                <span class="W-Mail">876956898@qq.com</span>
+                                <span class="W-Mail">cargox@qq.com</span>
                             </a>
                             <a href="javascript:;">
                                 <img src="img/qq.png" alt="">
@@ -1015,7 +1289,8 @@
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/swiper.min.js"></script>
-
+<script src="js/raphael.js"></script>
+<script src='js/init.min.js'></script>
 <!-- 鼠标翻页 -->
 <script>
     var index = 1;

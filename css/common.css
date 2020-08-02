@@ -106,8 +106,7 @@ li {
 
 /* 响应式开发 */
 
-
-/* @media screen and (max-width:1440px) {
+@media screen and (max-width:1440px) {
     .allContainer {
         display: block;
     }
@@ -123,4 +122,4 @@ li {
     .phoneContainer {
         display: block;
     }
-} */
+}
