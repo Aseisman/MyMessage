@@ -86,6 +86,7 @@
             }
         }
         
+        ;
         .allContainer {
             height: 100vh;
         }
@@ -300,21 +301,9 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            -webkit-transform: translateX(-50%) translateY(-50%);
-            -ms-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
-            -o-transform: translateX(-50%) translateY(-50%);
-            -moz-transform: translateX(-50%) translateY(-50%);
-            -webkit-transition-duration: 0.66s;
             transition-duration: 0.66s;
-            -o-transition-duration: 0.66s;
-            -moz-transition-duration: 0.66s;
-            -ms-transition-duration: 0.66s;
-            -webkit-transition-timing-function: swing;
-            transition-timing-function: swing;
-            -o-transition-timing-function: swing;
-            -moz-transition-timing-function: swing;
-            -ms-transition-timing-function: swing;
+            transition-timing-function: linear;
         }
         
         .nav-toggle .icon {
@@ -325,11 +314,11 @@
             position: absolute;
             top: 28px;
             left: 15px;
-            -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-            -o-transition-duration: 0.5s;
-            -moz-transition-duration: 0.5s;
-            -ms-transition-duration: 0.5s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            -ms-transition-duration: 0.3s;
             transiting-timing-function: swing;
             -webkit-transiting-timing-function: swing;
             -o-transiting-timing-function: swing;
@@ -725,7 +714,7 @@
         
         .W-lian-bottom .W-qq {
             left: -22px;
-            background: url(img/qq.jpg) no-repeat transparent;
+            background: url(img/qq.png) no-repeat transparent;
             background-size: 100% 100%;
             width: 138px;
             height: 150px;
@@ -740,7 +729,7 @@
         
         .W-lian-bottom .W-weixin {
             left: -22px;
-            background: url(img/wechat.jpg) no-repeat transparent;
+            background: url(img/wechat.png) no-repeat transparent;
             background-size: 100% 100%;
             width: 138px;
             height: 150px;
@@ -948,7 +937,7 @@
             margin: -2px 0 2px;
             color: #f7e621;
         }
-        /* test */
+        /* 手机部分 */
         
         .coverphone {
             position: fixed;
@@ -1144,7 +1133,7 @@
 
 <body>
     <!-- 电脑ui -->
-    <div class="allContainer" id="allContainer">
+    <div class="allContainer" id="allContainer" style="height: 100%;">
         <!-- 头像与姓名 -->
         <div class="My-logo">
             <img src="img/timg.jpg" alt="头像" class="headPhoto">
@@ -1216,7 +1205,7 @@
                     <div style="font-size: 20px;text-align: center;line-height: 40px;width: 100%;">
                         <div>许楷沂</div>
                         <div>一名初出茅庐的前端程序员</div>
-                        <div>CargoX@qq.com</div>
+                        <div>test</div>
                     </div>
                 </div>
                 <!-- 遮罩层 -->
@@ -1258,6 +1247,7 @@
                         <div class="ring ring-bottom-left ring-segment" style="z-index: 4;border-top-color: transparent;"></div>
                         <div class="ring ring-bottom-right"></div>
                         <div class="ring ring-bottom-right ring-segment"></div>
+
                     </div>
                 </div> -->
                 <div class="absolute">
@@ -1417,6 +1407,7 @@
                                         <div class="work_zhuan" style="display: none;"></div>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="work_tree"></div>
                         </div>
@@ -1462,7 +1453,7 @@
                             </a>
                             <a href="javascript:;">
                                 <img src="img/mail.png" alt="">
-                                <span class="W-Mail">CargoX@qq.com</span>
+                                <span class="W-Mail">test</span>
                             </a>
                             <a href="javascript:;">
                                 <img src="img/qq.png" alt="">
@@ -1516,7 +1507,7 @@
                         <div style="font-size: 18px;text-align: center;line-height: 30px;">
                             <div>许楷沂</div>
                             <div>一名初出茅庐的前端程序员</div>
-                            <div>CargoX@qq.com</div>
+                            <div>test</div>
                         </div>
                     </div>
                 </div>
@@ -1611,48 +1602,7 @@
                     <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">Project</div>
                 </div>
                 <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div id="myProjectSwiper" style="width: 200px;height: 200px;">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/yangguangkecheng.png" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">阳光课程</a></div>
-                            </div>
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/yunzhiguan.png" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">云智莞</a></div>
-                            </div>
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/5f23b3d22706a.jpg" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">个人简历网站</a></div>
-                            </div>
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/lun2.jpg" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">智慧小区出入系统</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- contact me -->
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">Contact Me</div>
-                    <div style="margin-top: 50px;">
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/github.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>CargoX</div>
-                        </div>
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/qq.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>876956898</div>
-                        </div>
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/wechat.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>CargoX</div>
-                        </div>
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/mail.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>CargoX@qq.com</div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
@@ -1668,11 +1618,12 @@
     var index = 1;
     var curIndex = 1;
     var container = document.getElementById('container')
-    var hei = document.body.clientHeight;
+        // var hei = document.body.clientHeight;
+    var hei = document.documentElement.clientHeight;
     // var hei = window.screen.height;
-    console.log(hei)
     var pages = document.getElementsByClassName('page');
     // 将每个page都设置成屏幕高度
+    console.log(hei)
     for (var page = 0; page < pages.length; page++) {
         pages[page].style.height = hei + 'px';
     }
@@ -1711,6 +1662,7 @@
             endTime = new Date().getTime();
         } else {
             // event.preventDefault();
+            console.log("an")
         }
     }
 
@@ -1826,7 +1778,6 @@
     element.addEventListener('mouseleave', handleMouseLeave);
 </script>
 
-
 <!-- 手机ui -->
 <!-- 监听右上角的导航键 -->
 <script>
@@ -1841,13 +1792,10 @@
     })
 </script>
 
-<!-- swiper -->
+<!-- 垂直swiper -->
 <script>
     var myPhoneSwiper = new Swiper('.myPhoneSwiper', {
         // direction: 'vertical'
-    })
-    var myProjectSwiper = new Swiper('#myProjectSwiper', {
-        effect: 'cube',
     })
 </script>
 

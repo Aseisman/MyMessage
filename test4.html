@@ -77,15 +77,6 @@
             }
         }
         
-        @keyframes opacity {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: .5;
-            }
-        }
-        
         .allContainer {
             height: 100vh;
         }
@@ -725,7 +716,7 @@
         
         .W-lian-bottom .W-qq {
             left: -22px;
-            background: url(img/qq.jpg) no-repeat transparent;
+            background: url(img/qq.png) no-repeat transparent;
             background-size: 100% 100%;
             width: 138px;
             height: 150px;
@@ -740,7 +731,7 @@
         
         .W-lian-bottom .W-weixin {
             left: -22px;
-            background: url(img/wechat.jpg) no-repeat transparent;
+            background: url(img/wechat.png) no-repeat transparent;
             background-size: 100% 100%;
             width: 138px;
             height: 150px;
@@ -949,196 +940,6 @@
             color: #f7e621;
         }
         /* test */
-        
-        .coverphone {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            background: rgba(243, 208, 208, 0.41);
-            width: 100%;
-            /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
-            height: 100vh;
-            filter: alpha(opacity=60);
-            /*设置透明度为60%*/
-            opacity: 1;
-            /*非IE浏览器下设置透明度为60%*/
-            z-Index: 1;
-        }
-        
-        .phone_message {
-            width: 100%;
-            position: relative;
-            z-index: 3;
-        }
-        
-        .nav-open .icon {
-            width: 0;
-        }
-        
-        .nav-open .icon::before {
-            -webkit-transform: translateY(10px) rotate(45deg);
-            -ms-transform: translateY(10px) rotate(45deg);
-            -o-transform: translateY(10px) rotate(45deg);
-            transform: translateY(10px) rotate(45deg);
-        }
-        
-        .nav-open .icon::after {
-            -webkit-transform: translateY(-8px) rotate(-45deg);
-            -ms-transform: translateY(-8px) rotate(-45deg);
-            -o-transform: translateY(-8px) rotate(-45deg);
-            transform: translateY(-8px) rotate(-45deg);
-        }
-        
-        .bars {
-            width: 100%;
-            background: #ccccccfa;
-            position: relative;
-            height: 20px;
-            border-radius: 8px;
-        }
-        
-        .bars-title {
-            color: white;
-            padding: 10px;
-        }
-        
-        .bars .bar-1 {
-            width: 80%;
-            background: #bef389;
-            position: absolute;
-            height: 20px;
-            border-radius: 8px;
-            padding-left: 10px;
-            color: #9c6bc1;
-        }
-        
-        .bars .bar-2 {
-            width: 88%;
-            background: #e6ffff;
-            position: absolute;
-            height: 20px;
-            border-radius: 8px;
-            padding-left: 10px;
-            color: #a791ff;
-        }
-        
-        .bars .bar-3 {
-            width: 70%;
-            background: #d1abff;
-            position: absolute;
-            height: 20px;
-            border-radius: 8px;
-            padding-left: 10px;
-            color: white;
-        }
-        
-        .bars .bar-4 {
-            width: 62%;
-            background: #ffa791;
-            position: absolute;
-            height: 20px;
-            border-radius: 8px;
-            padding-left: 10px;
-            color: white;
-        }
-        
-        .bars .bar-5 {
-            width: 80%;
-            background: #92d9ff;
-            position: absolute;
-            height: 20px;
-            border-radius: 8px;
-            padding-left: 10px;
-            color: white;
-        }
-        
-        .bars .bar-6 {
-            width: 88%;
-            background: #bdfbf1;
-            position: absolute;
-            height: 20px;
-            border-radius: 8px;
-            padding-left: 10px;
-            color: #559fdf;
-        }
-        
-        .arrows {
-            border-bottom: 3px solid white;
-            border-right: 3px solid #f9f6f6;
-            width: 11px;
-            height: 11px;
-            position: fixed;
-            border-radius: 2px;
-            transform: rotate(-45deg);
-            bottom: 87px;
-            opacity: 0;
-        }
-        
-        .arrow1 {
-            left: calc(50% - 45px);
-            animation: opacity 5s infinite linear alternate-reverse;
-            -webkit-animation: opacity 5s infinite linear alternate-reverse;
-            animation-delay: 0s;
-            -webkit-animation-delay: 0s;
-        }
-        
-        .arrow2 {
-            left: calc(50% - 27px);
-            animation: opacity 5s infinite linear alternate-reverse;
-            -webkit-animation: opacity 5s infinite linear alternate-reverse;
-            animation-delay: 0.3s;
-            -webkit-animation-delay: 0.3s;
-        }
-        
-        .arrow3 {
-            left: calc(50% - 9px);
-            animation: opacity 5s infinite linear alternate-reverse;
-            -webkit-animation: opacity 5s infinite linear alternate-reverse;
-            animation-delay: 0.6s;
-            -webkit-animation-delay: 0.6s;
-        }
-        
-        .arrow4 {
-            left: calc(50% + 9px);
-            animation: opacity 5s infinite linear alternate-reverse;
-            -webkit-animation: opacity 5s infinite linear alternate-reverse;
-            animation-delay: 0.9s;
-            -webkit-animation-delay: 0.9s;
-        }
-        
-        .arrow5 {
-            left: calc(50% + 27px);
-            animation: opacity 5s infinite linear alternate-reverse;
-            -webkit-animation: opacity 5s infinite linear alternate-reverse;
-            animation-delay: 1.2s;
-            -webkit-animation-delay: 1.2s;
-        }
-        
-        .dot {
-            width: 20px;
-            height: 20px;
-            margin: 12px;
-            background: #03A9F4;
-            border-radius: 50%;
-            position: relative;
-        }
-        
-        .dot::before {
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            background: #fffffffc;
-            content: "";
-            border-radius: 50%;
-            margin: 2px;
-        }
-        
-        .experience-title {
-            display: flex;
-            align-items: center;
-            color: #ffffffcf;
-            font-size: 17px;
-        }
     </style>
 </head>
 
@@ -1216,7 +1017,7 @@
                     <div style="font-size: 20px;text-align: center;line-height: 40px;width: 100%;">
                         <div>许楷沂</div>
                         <div>一名初出茅庐的前端程序员</div>
-                        <div>CargoX@qq.com</div>
+                        <div>test</div>
                     </div>
                 </div>
                 <!-- 遮罩层 -->
@@ -1462,7 +1263,7 @@
                             </a>
                             <a href="javascript:;">
                                 <img src="img/mail.png" alt="">
-                                <span class="W-Mail">CargoX@qq.com</span>
+                                <span class="W-Mail">test</span>
                             </a>
                             <a href="javascript:;">
                                 <img src="img/qq.png" alt="">
@@ -1482,181 +1283,7 @@
 
     <!-- 手机ui -->
     <div class="phoneContainer">
-        <!-- 背景图片 -->
-        <div>
-            <div class="coverphone"></div>
-            <img src="./img/gbp.jpg" alt="背景图片" style="width: 100%;height: 100vh;position: fixed;top: 0;">
-        </div>
-        <!-- 导航 -->
-        <div class="nav-yuan">
-            <div class="nav-toggle phoneNav">
-                <div class="icon"></div>
-            </div>
-        </div>
-        <!-- 向右滑 -->
-        <div>
-            <div class="arrows arrow1"></div>
-            <div class="arrows arrow2"></div>
-            <div class="arrows arrow3"></div>
-            <div class="arrows arrow4"></div>
-            <div class="arrows arrow5"></div>
-        </div>
-        <!-- 简历内容 -->
-        <div class="phone_message myPhoneSwiper">
-            <div class="swiper-wrapper">
-                <!-- 座右铭以及自我介绍 -->
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <img src="./img/timg.jpg" alt="touxiang" style="width:100px;height: 100px;border-radius: 50%;">
-                    <div>
-                        <div style="font-size: 20px;font-weight: bold;margin: 20px;">
-                            <div>When in doubt, use brute force.</div>
-                            <div>如果还没想清楚，就用蛮力算法</div>
-                            <div style="text-align: right;">——Ken Thompson</div>
-                        </div>
-                        <div style="font-size: 18px;text-align: center;line-height: 30px;">
-                            <div>许楷沂</div>
-                            <div>一名初出茅庐的前端程序员</div>
-                            <div>CargoX@qq.com</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- about me -->
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">About Me</div>
-                    <div style="width: 85%;margin: 0 auto;color: rgb(255 255 255);font-size: 16px;background: #96a2da6e;box-shadow: 0px 0px 16px #ffffff66;border-radius: 10px;padding: 10px;padding-top: 0;">
-                        <p style="text-indent: 4rem;">
-                            许楷沂，98年精神小伙，一名东莞理工学院准毕业大学生。 计算机专业出身的我,对前端很感兴趣并且钻研至今已有一年有余，今后的职业规划是朝着全栈发展，目前在学<span style="color: #fde6b2;">NodeJs、ReactJs</span>, 有良好的前端编程能力与编程习惯，熟练掌握<span style="color: #fde6b2;">DOM、CSS、JSON、ES6语法</span>等。已能够熟练使用<span style="color: #fde6b2;">VUE，小程序</span>进行开发，
-                            <span style="color: #fde6b2;">Sass、Webpack</span>的熟悉与掌握，也对<span style="color: #fde6b2;">Bootstrap、Element</span>等UI框架有一定的了解与使用。同时，在学校大一大二学习了JavaWeb编程，对<span style="color: #fde6b2;">数据库、SSM、Springboot</span>等熟练掌握。
-                        </p>
-                        <p>
-                            在
-                            <a href="#" title="" target="_blank" style="color: #fde6b2;">东莞市绿灯网络科技有限公司</a>实习过半年,主要是通过学习到的VUE知识与小程序知识，为用户提供一套完整的解决需求方案。
-                        </p>
-                        <p>
-                            与小伙伴们能有效和谐的沟通交流，与团队小伙伴一起讨论并运用最新技术解决业务；具备抗压能力、有较强的自学能力、能够熟练阅读使用中英文API、并上手应用。
-                        </p>
-                    </div>
-                </div>
-                <!-- 技能 -->
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">SKILLS</div>
-                    <div style="width:85%;">
-                        <div class="bars-title">ECMAScript</div>
-                        <div class="bars">
-                            <div class="bar-1">80%</div>
-                        </div>
-                    </div>
-                    <div style="width:85%;">
-                        <div class="bars-title">CSS3</div>
-                        <div class="bars">
-                            <div class="bar-2">88%</div>
-                        </div>
-                    </div>
-                    <div style="width:85%;">
-                        <div class="bars-title">React</div>
-                        <div class="bars">
-                            <div class="bar-3">70%</div>
-                        </div>
-                    </div>
-                    <div style="width:85%;">
-                        <div class="bars-title">NodeJs</div>
-                        <div class="bars">
-                            <div class="bar-4">62%</div>
-                        </div>
-                    </div>
-                    <div style="width:85%;">
-                        <div class="bars-title">JAVA</div>
-                        <div class="bars">
-                            <div class="bar-5">80%</div>
-                        </div>
-                    </div>
-                    <div style="width:85%;">
-                        <div class="bars-title">VUE</div>
-                        <div class="bars">
-                            <div class="bar-6">88%</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 我的经历 -->
-                <!-- <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">Experience</div>
-                </div> -->
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">Experience</div>
-                    <div style="width: 85%;">
-                        <div class="experience-title">
-                            <!-- 小圆形 -->
-                            <div class="dot"></div>
-                            <span>2020-07</span>
-                        </div>
-                        <div style="color: white;padding-left: 20px;border-left: 3px solid #03a6f4b5;margin-left: 20px;">
-                            <div style="font-size: 18px;margin-bottom: 6px;">字节跳动训练营</div>
-                            <div style="font-size: 11px;margin-bottom: 3px;color: #ffd53b;">学员</div>
-                            <div style="line-height: 17px;padding-bottom: 10px;">字节跳动训练营是由字节跳动与北京邮电大学联合举办的一次免费培训机会，2020年6月笔试通过训练营，与近50位同学一起学习交流，与字节跳动工程师探讨与学习，最终以大项目评分第一结营。</div>
-                        </div>
-                        <div class="experience-title">
-                            <!-- 小圆形 -->
-                            <div class="dot"></div>
-                            <span>2019-10</span>
-                        </div>
-                        <div style="color: white;padding-left: 20px;border-left: 3px solid #03a6f4b5;margin-left: 20px;">
-                            <div style="font-size: 18px;margin-bottom: 6px;">东莞绿灯科技有限公司</div>
-                            <div style="font-size: 11px;margin-bottom: 3px;color: #ffd53b;">前端开发</div>
-                            <div style="line-height: 17px;padding-bottom: 10px;">东莞市绿灯科技是由东莞理工学院的学生创办的一个为客户专门定制服务的网络服务商。主要为客户定制计算机网络技术开发、技术转让、技术咨询、技术服务、网页设计等领域服务。 2019年10月~2020年5月底退出团队。</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 我的项目 -->
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">Project</div>
-                </div>
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div id="myProjectSwiper" style="width: 200px;height: 200px;">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/yangguangkecheng.png" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">阳光课程</a></div>
-                            </div>
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/yunzhiguan.png" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">云智莞</a></div>
-                            </div>
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/5f23b3d22706a.jpg" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">个人简历网站</a></div>
-                            </div>
-                            <div class="swiper-slide" style="width: 200px;height: 200px !important;">
-                                <img src="./img/lun2.jpg" alt="" style="width: 100%;height: 100%;border-radius: 30px;">
-                                <div style="width: 100%;text-align: center; height: 40px;line-height: 40px;font-size: 18px;"><a href="#1" style="color: white;">智慧小区出入系统</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- contact me -->
-                <div class="swiper-slide" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height:100vh;">
-                    <div style="text-align: center;font-size: 20px;color: white;padding-bottom: 6px;font-weight: bold;">Contact Me</div>
-                    <div style="margin-top: 50px;">
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/github.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>CargoX</div>
-                        </div>
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/qq.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>876956898</div>
-                        </div>
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/wechat.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>CargoX</div>
-                        </div>
-                        <div style="display: flex;font-size: 16px;font-weight: bold;color: #ffffffcf;">
-                            <img src="img/mail.png" alt="" style="width: 16px;height: 16px;margin-right: 10px;margin-left: -20px;">
-                            <div>CargoX@qq.com</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
     </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
@@ -1825,30 +1452,6 @@
     element.addEventListener('mousemove', handleMouseMove);
     element.addEventListener('mouseleave', handleMouseLeave);
 </script>
-
-
-<!-- 手机ui -->
 <!-- 监听右上角的导航键 -->
-<script>
-    $('.phoneNav').on('click', function() {
-        if ($('.phoneNav').hasClass('nav-open')) {
-            console.log("yes")
-            $('.phoneNav').removeClass('nav-open')
-        } else {
-            console.log('no')
-            $('.phoneNav').addClass('nav-open')
-        }
-    })
-</script>
-
-<!-- swiper -->
-<script>
-    var myPhoneSwiper = new Swiper('.myPhoneSwiper', {
-        // direction: 'vertical'
-    })
-    var myProjectSwiper = new Swiper('#myProjectSwiper', {
-        effect: 'cube',
-    })
-</script>
 
 </html>

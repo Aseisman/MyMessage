@@ -1,0 +1,379 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes warn {
+            0% {
+                transform: scale(0.3);
+                -webkit-transform: scale(0.3);
+                opacity: 0.0;
+            }
+            25% {
+                transform: scale(0.3);
+                -webkit-transform: scale(0.3);
+                opacity: 0.1;
+            }
+            50% {
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+                opacity: 0.3;
+            }
+            75% {
+                transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                opacity: 0.0;
+            }
+        }
+        
+        @keyframes warn1 {
+            0% {
+                transform: scale(0.3);
+                -webkit-transform: scale(0.3);
+                opacity: 0.0;
+            }
+            25% {
+                transform: scale(0.3);
+                -webkit-transform: scale(0.3);
+                opacity: 0.1;
+            }
+            50% {
+                transform: scale(0.3);
+                -webkit-transform: scale(0.3);
+                opacity: 0.3;
+            }
+            75% {
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+                opacity: 0.0;
+            }
+        }
+        
+        .container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            left: 10px;
+            top: 10px;
+            padding: 100px auto;
+        }
+        
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: 160px;
+            top: 160px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border: 1px solid #33ccff;
+            border-radius: 50%;
+            background-color: #33ccff;
+            z-index: 2;
+        }
+        
+        .pulse {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            left: 120px;
+            top: 120px;
+            border: 1px solid #3399ff;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0;
+            -webkit-animation: warn 2s ease-out;
+            -moz-animation: warn 2s ease-out;
+            animation: warn 2s ease-out;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        .pulse1 {
+            position: absolute;
+            width: 88px;
+            height: 88px;
+            left: 120px;
+            top: 120px;
+            border: 2px solid #3399ff;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0;
+            -webkit-animation: warn1 2s ease-out;
+            -moz-animation: warn1 2s ease-out;
+            animation: warn1 2s ease-out;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="dot"></div>
+        <div class="pulse"></div>
+        <div class="pulse1"></div>
+    </div>
+
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <title></title>
+
+    <style type="text/css">
+
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body,
+        ul,
+        li,
+        a,
+        p,
+        div {
+            /*慎删*/
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        #wrap {
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        #main {
+            top: 0;
+            position: relative;
+        }
+        
+        .page {
+            /*谨删*/
+            width: 100%;
+            margin: 0;
+        }
+        
+        #pageUl {
+            position: fixed;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+        <!-- 每个全屏页面div的class为page，其中的图片的class为pageImg
+        ul为右侧的导航栏
+        pageUlLi和page的数目必须相等，修改数目时还应修改最下面js鼠标悬停的跳转代码
+        -->
+<!--  <div id="wrap">
+        <div id="main">
+            <ul id="pageUl" type="circle">
+                <li id="pageUlLi1" class="pageUlLi" style="color: red;">&nbsp;</li>
+                <li id="pageUlLi2" class="pageUlLi">&nbsp;</li>
+                <li id="pageUlLi3" class="pageUlLi">&nbsp;</li>
+                <li id="pageUlLi4" class="pageUlLi">&nbsp;</li>
+                <li id="pageUlLi5" class="pageUlLi">&nbsp;</li>
+            </ul>
+            <div style="background-color: #1b6d85" id="page1" class="page">
+
+            </div>
+            <div style="background-color: #5cb85c" id="page2" class="page">
+
+            </div>
+            <div style="background-color: #8a6d3b" id="page3" class="page">
+
+            </div>
+            <div style="background-color: #337ab7" id="page4" class="page">
+
+            </div>
+            <div style="background-color: #66512c" id="page5" class="page">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    //改变窗口大小时调整图片大小
+    window.onload = resizeImages;
+    window.onresize = resizeImages;
+
+    function resizeImages() {
+        $(function(e) {
+            var screenWeight = document.documentElement.clientWidth;
+            var screenHeight = document.documentElement.clientHeight;
+            $("[name=pageImg]").css("width", screenWeight).css("height", screenHeight);
+            $("#pageUl").css("bottom", screenHeight >> 1);
+        });
+    }
+
+    var index = 1;
+    var curIndex = 1;
+    var wrap = document.getElementById("wrap");
+    var main = document.getElementById("main");
+    var hei = document.body.clientHeight;
+    wrap.style.height = hei + "px";
+    var obj = document.getElementsByTagName("div");
+    for (var i = 0; i < obj.length; i++) {
+        if (obj[i].className == 'page') {
+            obj[i].style.height = hei + "px";
+        }
+    }
+    var pageNum = document.querySelectorAll(".page").length;
+    //如果不加时间控制，滚动会过度灵敏，一次翻好几屏
+    var startTime = 0, //翻屏起始时间  
+        endTime = 0,
+        now = 0;
+    //浏览器兼容      
+    if ((navigator.userAgent.toLowerCase().indexOf("firefox") != -1)) {
+        document.addEventListener("DOMMouseScroll", scrollFun, false);
+    } else if (document.addEventListener) {
+        document.addEventListener("mousewheel", scrollFun, false);
+    } else if (document.attachEvent) {
+        document.attachEvent("onmousewheel", scrollFun);
+    } else {
+        document.onmousewheel = scrollFun;
+    }
+
+    //滚动事件处理函数
+    function scrollFun(event) {
+        startTime = new Date().getTime();
+        var delta = event.detail || (-event.wheelDelta);
+        //mousewheel事件中的 “event.wheelDelta” 属性值：返回的如果是正值说明滚轮是向上滚动
+        //DOMMouseScroll事件中的 “event.detail” 属性值：返回的如果是负值说明滚轮是向上滚动
+        if ((endTime - startTime) < -1000) {
+            if (delta > 0 && parseInt(main.offsetTop) > -(hei * (pageNum - 1))) {
+                //向下滚动
+                index++;
+                toPage(index);
+            }
+            if (delta < 0 && parseInt(main.offsetTop) < 0) {
+                //向上滚动
+                index--;
+                toPage(index);
+            }
+            endTime = new Date().getTime();
+        } else {
+            console.log('prevent')
+                // event.preventDefault();
+        }
+    }
+
+
+    function toPage(idx) {
+        //jquery实现动画效果
+        if (idx != curIndex) {
+            index = idx
+            var delta = idx - curIndex;
+            now = now - delta * hei;
+            $("#main").animate({
+                top: (now + 'px')
+            }, 500);
+            curIndex = idx;
+            //更改列表的选中项
+            $(".pageUlLi").css("color", "black");
+            $("#pageUlLi" + idx).css("color", "red");
+
+        }
+    }
+
+    // //鼠标悬停翻页
+    // document.getElementById("pageUlLi1").onmouseover = function () {
+    //     toPage(1);
+    // }
+    // document.getElementById("pageUlLi2").onmouseover = function () {
+    //     toPage(2);
+    // }
+    // document.getElementById("pageUlLi3").onmouseover = function () {
+    //     toPage(3);
+    // }
+    // document.getElementById("pageUlLi4").onmouseover = function () {
+    //     toPage(4);
+    // }
+    // document.getElementById("pageUlLi5").onmouseover = function () {
+    //     toPage(5);
+    // }
+    //鼠标点击翻页
+    document.getElementById("pageUlLi1").onclick = function() {
+        toPage(1);
+    }
+    document.getElementById("pageUlLi2").onclick = function() {
+        toPage(2);
+    }
+    document.getElementById("pageUlLi3").onclick = function() {
+        toPage(3);
+    }
+    document.getElementById("pageUlLi4").onclick = function() {
+        toPage(4);
+    }
+    document.getElementById("pageUlLi5").onclick = function() {
+        toPage(5);
+    }
+</script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <svg id="icon-zhijia" viewBox="0 0 1025 1024" style="width: 40%;height: 13%;position: absolute;left: 29%;top: 0;">
+        <path d="M20.8 868.8h983.2v124.8H20.8z" fill="#515151">
+        </path>
+        <path d="M88 868.8h849.6l67.2-379.2H20.8z" fill="#515151">
+        </path>
+        <path d="M1004.8 848h-43.2l63.2-355.2c0.8-5.6-0.8-12-4.8-16.8-4-4.8-9.6-7.2-16-7.2H670.4l-28-99.2c-18.4-64-6.4-132 32.8-186.4l2.4-3.2c24-32.8 27.2-76 8.8-112.8S631.2 8 590.4 8H435.2c-40.8 0-77.6 22.4-96.8 59.2-18.4 36.8-15.2 80 8.8 112.8l2.4 3.2c39.2 54.4 51.2 121.6 32.8 186.4l-28 99.2H20.8c-6.4 0-12 2.4-16 7.2s-5.6 10.4-4.8 16.8l64 355.2H20.8c-11.2 0-20 8.8-20 20v124.8c0 11.2 8.8 20 20 20h983.2c11.2 0 20-8.8 20-20v-124.8c0.8-10.4-8-20-19.2-20z m-24.8-338.4l-60 338.4H778.4l-96-338.4h297.6z m-237.6 379.2v84H283.2v-84h459.2zM383.2 159.2l-2.4-3.2c-15.2-20.8-17.6-47.2-5.6-70.4s34.4-36.8 60-36.8h155.2c25.6 0 48.8 13.6 60 36.8 12 23.2 9.6 49.6-5.6 70.4l-2.4 3.2c-46.4 64-60.8 144.8-39.2 220.8l24.8 88H397.6l24.8-88c21.6-76 7.2-156-39.2-220.8zM45.6 509.6h297.6l-49.6 176c-3.2 11.2 3.2 22.4 14.4 24.8 11.2 3.2 22.4-3.2 24.8-14.4l52.8-187.2h253.6l96 338.4H105.6L45.6 509.6z m196.8 379.2v84H41.6v-84h200.8z m741.6 0v84H783.2v-84h200.8z"
+              fill="#603813">
+        </path>
+        <path d="M298.4 744.8c-11.2-3.2-22.4 3.2-24.8 14.4l-8 29.6c-3.2 11.2 3.2 22.4 14.4 24.8 1.6 0.8 4 0.8 5.6 0.8 8.8 0 16.8-5.6 20-15.2l8-29.6c1.6-10.4-4.8-21.6-15.2-24.8z"
+              fill="#603813">
+        </path>
+    </svg> -->
+    <!-- <div id="diagram"></div> -->
+    <div style="width:100px;height:100px;border-radius: 50%;background-color: aliceblue;">1</div>
+    <div style="width:100px;height:100px;border-radius: 50%;background-color: aliceblue;">2</div>
+    <div style="width:100px;height:100px;border-radius: 50%;background-color: aliceblue;">3</div>
+    <div style="width:100px;height:100px;border-radius: 50%;background-color: aliceblue;">4</div>
+    <div style="width:100px;height:100px;border-radius: 50%;background-color: aliceblue;">5</div>
+    <div style="width:100px;height:100px;border-radius: 50%;background-color: aliceblue;">6</div>
+</body>
+<!-- <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script> -->
+<!-- <script src="js/raphael.js"></script>
+<script src='js/init.min.js'></script> -->
+
+</html>

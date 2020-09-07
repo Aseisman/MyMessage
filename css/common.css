@@ -106,20 +106,20 @@ li {
 
 /* 响应式开发 */
 
-@media screen and (max-width:1440px) {
+@media screen and (max-width:2560px) {
     .allContainer {
-        display: block;
+        display: block !important;
     }
     .phoneContainer {
-        display: none;
+        display: none !important;
     }
 }
 
 @media screen and (max-width:768px) {
     .allContainer {
-        display: none;
+        display: none !important;
     }
     .phoneContainer {
-        display: block;
+        display: block !important;
     }
 }
