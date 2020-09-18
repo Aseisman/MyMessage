@@ -1676,6 +1676,14 @@
     for (var page = 0; page < pages.length; page++) {
         pages[page].style.height = hei + 'px';
     }
+    window.onresize = function() {
+        hei = document.body.clientHeight;
+        // 将每个page都设置成屏幕高度
+        for (var page = 0; page < pages.length; page++) {
+            pages[page].style.height = hei + 'px';
+        }
+        console.log(hei)
+    }
     var pagenum = pages.length;
     //如果不加时间控制，滚动会过度灵敏，一次翻好几屏
     var startTime = 0, //翻屏起始时间  
@@ -1698,7 +1706,7 @@
         //mousewheel事件中的 “event.wheelDelta” 属性值：返回的如果是正值说明滚轮是向上滚动
         //DOMMouseScroll事件中的 “event.detail” 属性值：返回的如果是负值说明滚轮是向上滚动
         if ((endTime - startTime) < -1000) {
-            if (delta > 0 && parseInt(container.offsetTop) > -(hei * (pagenum - 1))) {
+            if (delta > 0 && parseInt(container.offsetTop) > -(document.body.clientHeight * (pagenum - 1))) {
                 //向下滚动
                 index++;
                 toPage(index);
@@ -1719,7 +1727,7 @@
         if (idx != curIndex) {
             index = idx
             var delta = idx - curIndex;
-            now = now - delta * hei;
+            now = now - delta * document.body.clientHeight;
 
             $("#container").animate({
                 top: (now + 'px'),
